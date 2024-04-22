@@ -1,1 +1,1 @@
-Assignments on EcmaScript 6, the new Javascript syntax from 2015
+0x00-ES6_basic
