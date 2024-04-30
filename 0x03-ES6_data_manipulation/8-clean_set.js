@@ -1,12 +1,11 @@
-export default function cleanSet(set, startString) {
-  if (startString.length === 0 || startString === undefined) {
+const cleanSet = (set, startString) => {
+  if (startString === undefined || startString.length === 0) {
     return '';
   }
   return [...set]
-    .filter((el) => el !== undefined ? el.startsWith(startString) : '')
-    .map((ele) => ele !== undefined ? ele.slice(startString.length) : '')
+    .filter((parametro) => (parametro !== undefined ? parametro.startsWith(startString) : ''))
+    .map((parametro) => (parametro !== undefined ? parametro.slice(startString.length) : ''))
     .join('-');
-}
+};
 
-console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), 'bon'));
-console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), ''));
+export default cleanSet;
