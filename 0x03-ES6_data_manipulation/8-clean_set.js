@@ -3,8 +3,9 @@ export default function cleanSet(set, startString) {
     return '';
   }
   return (([...set]
-    .filter((el) => el.startsWith(startString)))
-    .map((ele) => ele.slice(startString.length))).join('-');
+    .filter((el) => el !== undefined ? el.startsWith(startString)) : '')
+    .map((ele) => ele !== undefined ? ele.slice(startString.length)))
+    .join('-');
 }
 
 console.log(cleanSet(new Set(['bonjovi', 'bonaparte', 'bonappetit', 'banana']), 'bon'));
