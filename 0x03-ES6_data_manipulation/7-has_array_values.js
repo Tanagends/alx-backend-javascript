@@ -1,9 +1,7 @@
-
-
 export default function hasValuesFromArray(set, array) {
-  let arr_set = new Set(array);
-  
-  for (let item of arr_set) {
+  const arrSet = new Set(array);
+
+  for (const item of arrSet) {
     if (!set.has(item)) {
       return false;
     }
