@@ -1,4 +1,3 @@
-
 export default function groceriesList() {
   const new_map = new Map();
 
